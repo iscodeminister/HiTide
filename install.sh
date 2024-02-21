@@ -4,7 +4,7 @@
 echo "deb http://legacy.raspbian.org/raspbian stretch main" >> /etc/apt/sources.list
 
 # update package list and install dependencies
-apt update
+apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update
 apt install -y multiarch-support libavformat57 git libportaudio2* libflac++6v5* libavahi-common3 libavahi-client3 alsa-utils
 
 # create working folder
