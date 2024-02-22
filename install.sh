@@ -3,6 +3,7 @@
 # add stretch repo to sources list
 #echo "deb http://legacy.raspbian.org/raspbian stretch main" >> /etc/apt/sources.list
 echo "deb http://archive.debian.org/debian-archive/debian stretch main" >> /etc/apt/sources.list
+echo "APT::Default-Release "buster";" >> /etc/apt/apt.conf/70debconf
 
 # update package list and install dependencies
 apt-get -o Acquire::Check-Valid-Until=false -o Acquire::Check-Date=false update
